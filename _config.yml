@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://puneetguptanitj.net
+url: http://puneetguptanitj.github.io
 title: 
 email: puneetguptanitj@gmail.com
 author: Your Name
@@ -15,10 +15,12 @@ credits: 'Credits: Landing Page is a free to use, open source Bootstrap theme cr
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
-
+plugins:
+  - jekyll-paginate
 # Build settings
 markdown: kramdown
-permalink: pretty
+paginate: 5
+
 
 # ----------------------- #
 #   3rd Party Settings    #
