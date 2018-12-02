@@ -1,0 +1,52 @@
+---
+layout: post
+title: Hindi fonts in Latex
+date: 2008-12-07 15:36:21.000000000 -08:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Latex
+tags: []
+meta:
+  _edit_last: '1965023'
+author:
+  login: paradoxofmatrix
+  email: puneetguptanitj@gmail.com
+  display_name: paradoxofmatrix
+  first_name: ''
+  last_name: ''
+---
+<p>Everything is there in Readme of the package (velthuis.zip) but let me put it simply as:</p>
+<ul>
+<li>Get the package <a href="http://www.ctan.org/get/language/devanagari/velthuis.zip">velthuis</a></li>
+</ul>
+<ul>
+<li>Unzip it and put it in "C:\Cygwin\usr\share\texmf" for cygwin users, or where ever your  usr\share\textmf directory is</li>
+</ul>
+<ul>
+<li>Go to the file C:\Cygwin\usr\share\texmf\web2c\texmf.cnf</li>
+</ul>
+<ul>
+<li>Kpathsea uses TEXMF variable to get ls-R files.</li>
+</ul>
+<ul>
+<li>To add the new velithuis tree, get the path included like this</li>
+</ul>
+<p>DEVNAG = /usr/share/texmf/tex/latex/velthuis<br />
+TEXMF = {!!$DEVNAG, !!$TEXMFCONFIG, !!$TEXMFHOME}</p>
+<ul>
+<li>Rebuild the file database by running mktexlsr</li>
+<li>Use these commands to test the installation</li>
+</ul>
+<p>kpsewhich devanagari.sty<br />
+kpsewhich dvng10.tfm<br />
+kpsewhich dvng10.mf<br />
+kpsewhich dvng10.pfb</p>
+<ul>
+<li>Once you have this working, add the executable &lt;devnag&gt; in C:\Cygwin\usr\share\texmf\velthuis\bin\win32 to the path variable</li>
+<li>Get the sample dn file from <a href="http://128.104.70.13/tex-archive//language/devanagari/velthuis/doc/generic/velthuis/">here</a> , misspal.dn  is a good example file</li>
+<li>devnag sample.dn --&gt; generates tex file --&gt; from there its your game!</li>
+</ul>
