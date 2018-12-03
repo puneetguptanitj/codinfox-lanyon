@@ -19,7 +19,7 @@ plugins:
   - jekyll-paginate
 # Build settings
 markdown: kramdown
-paginate: 5
+paginate: 20
 
 
 # ----------------------- #
