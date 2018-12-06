@@ -20,6 +20,8 @@ plugins:
 # Build settings
 markdown: kramdown
 paginate: 20
+paginate_path: blog/:num
+
 
 
 # ----------------------- #
